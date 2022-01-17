@@ -16,34 +16,30 @@ namespace Exercise_02
                 list[i] = new Student0102();
                 list[i].inputInfor();
             }
-            //First CRITERIAL 
-            Console.WriteLine("\nFirst criterial : ");
+            //CRITERIAL 
+
             for (int i = 0; i < n; i++)
             {
+                Console.WriteLine("\nFirst criterial : ");
                 if (list[i].calculateAverage() >= 7 && list[i].Mark1 > 5 && list[i].Mark2 > 5 && list[i].Mark3 > 5)
                 {
                     list[i].displayInfor();
+                    break;
                 }
-            }
-            //Second CRITERIAL 
-            Console.WriteLine("\nSencond criterial : ");
-            for (int i = 0; i < n; i++)
-            {
+                Console.WriteLine("\nSencond criterial : ");
                 if (list[i].calculateAverage() < 7 && list[i].Mark1 >= 5 && list[i].Mark2 >= 5 && list[i].Mark3 >= 5)
                 {
                     list[i].displayInfor();
+                    break;
                 }
-            }
-            //Third CRITERIAL 
-            Console.WriteLine("\nThird criterial : ");
-            for (int i = 0; i < n; i++)
-            {
+                Console.WriteLine("\nThird criterial : ");
                 if (list[i].Mark1 < 5 || list[i].Mark2 < 5 || list[i].Mark3 < 5)
                 {
                     list[i].displayInfor();
+                    break;
                 }
+                Console.ReadLine();
             }
-            Console.ReadLine();
         }
     }
 }
